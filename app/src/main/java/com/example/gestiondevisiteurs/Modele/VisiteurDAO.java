@@ -93,7 +93,8 @@ public class VisiteurDAO {
         String myUrl = "https://noirot.alwaysdata.net/API/modifVisiteurByIdV.php";
         Log.d("dans requete",nvVisiteur.getId());
         String params =
-                "id=" + nvVisiteur.getId() + "&nom=" + nvVisiteur.getNom() +
+                        "id=" + nvVisiteur.getId() +
+                        "&nom=" + nvVisiteur.getNom() +
                         "&prenom=" + nvVisiteur.getPrenom() +
                         "&login=" + nvVisiteur.getLogin() +
                         "&mdp=" + nvVisiteur.getMdp() +
@@ -101,6 +102,36 @@ public class VisiteurDAO {
                         "&cp=" + nvVisiteur.getCp() +
                         "&ville=" + nvVisiteur.getville() +
                         "&dateEmbauche=" + nvVisiteur.getDateEmbauche();
+        Log.d("requete", params);
+
+
+        HttpPostRequest postRequest = new HttpPostRequest();
+        try {
+            result = postRequest.execute(new String[]{myUrl, params}).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        Log.d("resultat", result);
+        return result;
+
+    }
+
+    public String supVisiteur(Visiteur unVisiteur) {
+        String result = "";
+        String myUrl = "https://noirot.alwaysdata.net/API/supVisiteurByIdV.php";
+        Log.d("dans requete",unVisiteur.getId());
+        String params =
+                "id=" + unVisiteur.getId() +
+                        "&nom=" + unVisiteur.getNom() +
+                        "&prenom=" + unVisiteur.getPrenom() +
+                        "&login=" + unVisiteur.getLogin() +
+                        "&mdp=" + unVisiteur.getMdp() +
+                        "&adresse=" + unVisiteur.getAdresse() +
+                        "&cp=" + unVisiteur.getCp() +
+                        "&ville=" + unVisiteur.getville() +
+                        "&dateEmbauche=" + unVisiteur.getDateEmbauche();
         Log.d("requete", params);
 
 

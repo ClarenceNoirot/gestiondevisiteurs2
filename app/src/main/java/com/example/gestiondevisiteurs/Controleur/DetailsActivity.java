@@ -27,7 +27,7 @@ public class DetailsActivity extends AppCompatActivity {
     private String login;
     private String mdp;
 
-    private Button btnValider, btnSupprimer;
+    private Button btnValider, btnSup;
     private ArrayList<Visiteur> lesVisiteurs = new ArrayList<Visiteur>();
 
     @Override
@@ -77,19 +77,32 @@ public class DetailsActivity extends AppCompatActivity {
             }
 
         });
+        btnSup = (Button) findViewById(R.id.supprimer);
+        btnSup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                update();
+                Intent intent = new Intent(v.getContext(), ConsultActivity.class);
+                startActivity(intent);
+            }
+
+        });
 
     }
 
     private void update() {
-        VisiteurDAO visiteur=new VisiteurDAO();
+        VisiteurDAO visiteur = new VisiteurDAO();
         //ArrayList<Visiteur> lesVisiteurs;
 
-        Visiteur nvVisiteur= new Visiteur(editId.getText().toString(),editPrenom.getText().toString(),editNom.getText().toString(),
-                editLogin.getText().toString(),editMdp.getText().toString(),editAdresse.getText().toString(),editCp.getText().toString(),
-                editVille.getText().toString(),editDateEmbauche.getText().toString());
-        Visiteur ancVisiteur= new Visiteur(id,prenom,nom,login,mdp,adresse,cp,ville,dateEmbauche);
-        Log.d("ancvisiteur",ancVisiteur.getId());
-        String res= visiteur.updateVisiteur(nvVisiteur,ancVisiteur);
-        Log.d("maj",res);
+        Visiteur nvVisiteur = new Visiteur(editId.getText().toString(), editPrenom.getText().toString(), editNom.getText().toString(),
+                editLogin.getText().toString(), editMdp.getText().toString(), editAdresse.getText().toString(), editCp.getText().toString(),
+                editVille.getText().toString(), editDateEmbauche.getText().toString());
+        Visiteur ancVisiteur = new Visiteur(id, prenom, nom, login, mdp, adresse, cp, ville, dateEmbauche);
+        Log.d("ancvisiteur", ancVisiteur.getId());
+        String res = visiteur.updateVisiteur(nvVisiteur, ancVisiteur);
+        Log.d("maj", res);
+    }
+
+    private void delete() {
     }
 }
