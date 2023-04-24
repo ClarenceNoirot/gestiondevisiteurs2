@@ -12,13 +12,6 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/modif"
-            android:layout_width="409dp"
-            android:layout_height="44dp"
-            android:text="Modifier"
-            tools:ignore="MissingConstraints" />
-
-        <Button
             android:id="@+id/consult"
             android:layout_width="414dp"
             android:layout_height="41dp"

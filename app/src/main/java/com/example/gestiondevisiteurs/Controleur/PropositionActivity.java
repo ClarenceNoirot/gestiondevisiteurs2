@@ -47,20 +47,6 @@ private Button btnajout,btnconsult,btnmodif;
             }
         });
 
-        btnmodif = (Button) findViewById(R.id.modif);
-
-        btnmodif.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-
-                // TODO Auto-generated method stub
-                Intent intent = new Intent(v.getContext(), ConsultActivity.class);
-
-                startActivity(intent);
-            }
-        });
 
     }
 }

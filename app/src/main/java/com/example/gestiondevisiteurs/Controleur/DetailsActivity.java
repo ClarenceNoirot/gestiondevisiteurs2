@@ -55,6 +55,8 @@ public class DetailsActivity extends AppCompatActivity {
         cp = getIntent().getStringExtra("cp");
         ville = getIntent().getStringExtra("ville");
         dateEmbauche = getIntent().getStringExtra("commentaire");
+//rajout nunes
+        editId.setText(id);
 
         editPrenom.setText(prenom);
         editNom.setText(nom);
@@ -80,7 +82,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void update() {
         VisiteurDAO visiteur=new VisiteurDAO();
-        ArrayList<Visiteur>lesVisiteurs;
+        //ArrayList<Visiteur> lesVisiteurs;
 
         Visiteur nvVisiteur= new Visiteur(editId.getText().toString(),editPrenom.getText().toString(),editNom.getText().toString(),
                 editLogin.getText().toString(),editMdp.getText().toString(),editAdresse.getText().toString(),editCp.getText().toString(),
