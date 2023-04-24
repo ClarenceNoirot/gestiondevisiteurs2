@@ -12,7 +12,7 @@ import com.example.gestiondevisiteurs.Modele.VisiteurDAO;
 import com.example.gestiondevisiteurs.R;
 
 public class PropositionActivity extends AppCompatActivity {
-private Button btnajout,btnconsult,btnmodif;
+private Button btnajout,btnconsult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
