@@ -38,9 +38,9 @@ private ArrayList<Visiteur> lesVisiteur=new ArrayList<>();
         txtVille=(EditText)findViewById(R.id.editTextVille);
         txtDateEmbauche=(EditText)findViewById(R.id.editTextDate);
 
-       listview=(ListView)findViewById(R.id.listview);
+        listview=(ListView)findViewById(R.id.listview);
         VisiteurDAO visiteurDAO=new VisiteurDAO();
-       lesVisiteur= visiteurDAO.recupVisiteur();
+        lesVisiteur= visiteurDAO.recupVisiteur();
         ArrayAdapter monAdapter = new ArrayAdapter(ConsultActivity.this, android.R.layout.simple_list_item_1, lesVisiteur);
         listview.setAdapter(monAdapter);
 

@@ -75,7 +75,7 @@ public class VisiteurDAO {
                 String resCP = tabJson.getJSONObject(i).getString("cp");
                 String resVille = tabJson.getJSONObject(i).getString("ville");
                 String resDateE = tabJson.getJSONObject(i).getString("dateEmbauche");
-                lesVisiteurs.add(new Visiteur(id, resNom, resPrenom, resLogin, resMdp, resAdresse, resCP, resVille, resDateE));
+                //lesVisiteurs.add(new Visiteur(id, resNom, resPrenom, resLogin, resMdp, resAdresse, resCP, resVille, resDateE));
                 unVisiteur = new Visiteur(id, resNom, resPrenom, resLogin, resMdp, resAdresse, resCP, resVille, resDateE);
                 Log.d("un visiteur", unVisiteur.toString());
                 lesVisiteurs.add(unVisiteur);
