@@ -107,4 +107,19 @@ public class Visiteur {
     public String toString(){
         return id+"  "+nom+"  "+prenom;
     }
+
+
+    public String afficher() {
+        return "Visiteur{" +
+                "id='" + id + '\'' +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", login='" + login + '\'' +
+                ", mdp='" + mdp + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", cp='" + cp + '\'' +
+                ", ville='" + ville + '\'' +
+                ", dateEmbauche='" + dateEmbauche + '\'' +
+                '}';
+    }
 }

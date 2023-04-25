@@ -54,6 +54,7 @@ public class DetailsActivity extends AppCompatActivity {
         adresse = getIntent().getStringExtra("adresse");
         cp = getIntent().getStringExtra("cp");
         ville = getIntent().getStringExtra("ville");
+        Log.d("message","ville"+ville);
         dateEmbauche = getIntent().getStringExtra("commentaire");
 //rajout nunes
         editId.setText(id);
@@ -63,8 +64,8 @@ public class DetailsActivity extends AppCompatActivity {
         editLogin.setText(login);
         editMdp.setText(mdp);
         editAdresse.setText(adresse);
-        editCp.setText(adresse);
-        editVille.setText(adresse);
+        editCp.setText(cp);
+        editVille.setText(ville);
         editDateEmbauche.setText(dateEmbauche);
 
         btnValider = (Button) findViewById(R.id.buttonValiderAjout);
@@ -103,6 +104,12 @@ public class DetailsActivity extends AppCompatActivity {
         Log.d("maj", res);
     }
 
-    private void delete() {
+    private void delete(){
+        VisiteurDAO visiteurAcces = new VisiteurDAO();
+        Visiteur unVisiteur= new Visiteur(id, editPrenom.getText().toString(),editNom.getText().toString(),editLogin.getText().toString(), editMdp.getText().toString(), editAdresse.getText().toString(),
+                editCp.getText().toString(),editVille.getText().toString(),
+                editDateEmbauche.getText().toString());
+        visiteurAcces.supVisiteur(unVisiteur);
+
     }
 }

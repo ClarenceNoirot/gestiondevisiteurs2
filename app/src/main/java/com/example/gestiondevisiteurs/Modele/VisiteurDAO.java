@@ -91,9 +91,9 @@ public class VisiteurDAO {
     public String updateVisiteur(Visiteur nvVisiteur, Visiteur ancVisiteur) {
         String result = "";
         String myUrl = "https://noirot.alwaysdata.net/API/modifVisiteurByIdV.php";
-        Log.d("dans requete",nvVisiteur.getId());
+        Log.d("dans requete",nvVisiteur.afficher());
         String params =
-                        "id=" + nvVisiteur.getId() +
+                        "id=" + ancVisiteur.getId() +
                         "&nom=" + nvVisiteur.getNom() +
                         "&prenom=" + nvVisiteur.getPrenom() +
                         "&login=" + nvVisiteur.getLogin() +
@@ -124,6 +124,7 @@ public class VisiteurDAO {
         Log.d("dans requete",unVisiteur.getId());
         String params =
                 "id=" + unVisiteur.getId() +
+
                         "&nom=" + unVisiteur.getNom() +
                         "&prenom=" + unVisiteur.getPrenom() +
                         "&login=" + unVisiteur.getLogin() +

@@ -48,7 +48,7 @@ private ArrayList<Visiteur> lesVisiteur=new ArrayList<>();
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Visiteur selectedItem = (Visiteur) listview.getAdapter().getItem(position);
-                Log.d("selection",selectedItem.toString());
+                Log.d("selection",selectedItem.afficher());
                 Intent i = new Intent(ConsultActivity.this, DetailsActivity.class);
                 i.putExtra("pos", position);
                 i.putExtra("id", selectedItem.getId());

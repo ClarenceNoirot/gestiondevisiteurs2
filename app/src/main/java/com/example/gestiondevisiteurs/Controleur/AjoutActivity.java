@@ -21,7 +21,7 @@ public class AjoutActivity extends AppCompatActivity {
 
     private EditText id, nom, prenom, login, mdp, adresse, cp, ville, dateEmbauche;
     private Button validerAjout;
-    private Button retour;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
