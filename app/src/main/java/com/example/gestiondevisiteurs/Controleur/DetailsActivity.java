@@ -82,7 +82,7 @@ public class DetailsActivity extends AppCompatActivity {
         btnSup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                update();
+                delete();
                 Intent intent = new Intent(v.getContext(), ConsultActivity.class);
                 startActivity(intent);
             }
