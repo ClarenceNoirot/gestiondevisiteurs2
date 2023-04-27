@@ -57,8 +57,8 @@ public class DetailsActivity extends AppCompatActivity {
         Log.d("message","ville"+ville);
         dateEmbauche = getIntent().getStringExtra("commentaire");
 //rajout nunes
-        editId.setText(id);
 
+        editId.setText(id);
         editPrenom.setText(prenom);
         editNom.setText(nom);
         editLogin.setText(login);
@@ -95,13 +95,13 @@ public class DetailsActivity extends AppCompatActivity {
         VisiteurDAO visiteur = new VisiteurDAO();
         //ArrayList<Visiteur> lesVisiteurs;
 
-        Visiteur nvVisiteur = new Visiteur(editId.getText().toString(), editPrenom.getText().toString(), editNom.getText().toString(),
+        Visiteur unVisiteur = new Visiteur(editId.getText().toString(), editNom.getText().toString(), editPrenom.getText().toString(),
                 editLogin.getText().toString(), editMdp.getText().toString(), editAdresse.getText().toString(), editCp.getText().toString(),
                 editVille.getText().toString(), editDateEmbauche.getText().toString());
-        Visiteur ancVisiteur = new Visiteur(id, prenom, nom, login, mdp, adresse, cp, ville, dateEmbauche);
-        Log.d("ancvisiteur", ancVisiteur.getId());
-        String res = visiteur.updateVisiteur(nvVisiteur, ancVisiteur);
-        Log.d("maj", res);
+        //Log.d("ancvisiteur", ancVisiteur.getId());
+        String idAModifier = id;
+        visiteur.updateVisiteur(unVisiteur, idAModifier);
+        
     }
 
     private void delete(){

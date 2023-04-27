@@ -88,20 +88,20 @@ public class VisiteurDAO {
         return lesVisiteurs;
     }
 
-    public String updateVisiteur(Visiteur nvVisiteur, Visiteur ancVisiteur) {
+    public String updateVisiteur(Visiteur unVisiteur, String id) {
         String result = "";
         String myUrl = "https://noirot.alwaysdata.net/API/modifVisiteurByIdV.php";
-        Log.d("dans requete",nvVisiteur.afficher());
+        Log.d("dans requete",unVisiteur.afficher());
         String params =
-                        "id=" + ancVisiteur.getId() +
-                        "&nom=" + nvVisiteur.getNom() +
-                        "&prenom=" + nvVisiteur.getPrenom() +
-                        "&login=" + nvVisiteur.getLogin() +
-                        "&mdp=" + nvVisiteur.getMdp() +
-                        "&adresse=" + nvVisiteur.getAdresse() +
-                        "&cp=" + nvVisiteur.getCp() +
-                        "&ville=" + nvVisiteur.getville() +
-                        "&dateEmbauche=" + nvVisiteur.getDateEmbauche();
+                        "id=" + unVisiteur.getId() +
+                        "&nom=" + unVisiteur.getNom() +
+                        "&prenom=" + unVisiteur.getPrenom() +
+                        "&login=" + unVisiteur.getLogin() +
+                        "&mdp=" + unVisiteur.getMdp() +
+                        "&adresse=" + unVisiteur.getAdresse() +
+                        "&cp=" + unVisiteur.getCp() +
+                        "&ville=" + unVisiteur.getville() +
+                        "&dateEmbauche=" + unVisiteur.getDateEmbauche();
         Log.d("requete", params);
 
 
