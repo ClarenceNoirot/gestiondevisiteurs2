@@ -55,7 +55,7 @@ public class DetailsActivity extends AppCompatActivity {
         cp = getIntent().getStringExtra("cp");
         ville = getIntent().getStringExtra("ville");
         Log.d("message","ville"+ville);
-        dateEmbauche = getIntent().getStringExtra("commentaire");
+        dateEmbauche = getIntent().getStringExtra("dateEmbauche");
 //rajout nunes
 
         editId.setText(id);
